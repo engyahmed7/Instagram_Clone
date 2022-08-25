@@ -10,5 +10,5 @@ Verify New Email Address
 If you did not update your email address, no further action is required.
 
 Thanks,<br>
-{{ config('app.name') }}
+{{ config('app.name')}}
 @endcomponent

@@ -78,14 +78,16 @@ class UserController extends Controller
     {
         $user = User::find($id);
         auth()->user()->update([
-            'name'=>$request->name,
-            'phone'=>$request->phone,
+            'name' => $request->name,
+            'phone' => $request->phone,
         ]);
-        if(auth()->user()->email != $request->email){
+        if (auth()->user()->email != $request->email) {
             auth()->user()->newEmail($request->email);
+            // send message to user to verify new email
+            return redirect()->route('profile.show', Auth::user())->with('error', 'Please verify your new email address');
         }
 
-       
+
 
         return redirect()->route('profile.show', Auth::user())->with('success', 'Account updated successfully');
     }
