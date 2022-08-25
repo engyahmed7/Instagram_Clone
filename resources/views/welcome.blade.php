@@ -44,8 +44,11 @@ header {
 	justify-content: center;
     width: 100%;
 	height:100vh;
-
-
+	background: #e55d87;
+	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
 }
 .title {
 	-webkit-align-self: center;
@@ -81,8 +84,22 @@ header {
 	letter-spacing: 5px;
 	margin-top: 50px;
 }
-.btn{
-	background-color: #4CAF50; /* Green */
+
+/* .btn{
+	background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+} */
+.btn2,.btn{
+	background-color: #4890d0;
   border: none;
   color: white;
   padding: 15px;
@@ -94,21 +111,6 @@ header {
   cursor: pointer;
   border-radius: 4px;
 }
-.btn2{
-	background-color: #4890d0; /* Green */
-  border: none;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-
 
 
         </style>
@@ -134,11 +136,7 @@ header {
   <div class="title">
     <div><span class="typcn typcn-heart-outline icon heading"></span></div>
     <div class="smallsep heading"></div>
-	
-    <h1 class="heading"><img src="{{url('logo.jpg')}}" width="200px" class="css-class" alt="alt text"></h1>
-	<img style=" display: block;
-	margin-left: auto;
-	margin-right: auto;" src="{{url('log.png')}}" />
+    <h1 class="heading"> Instagram</h1>
     <div class="smallsep heading"></div>
   </div>
 </header>
