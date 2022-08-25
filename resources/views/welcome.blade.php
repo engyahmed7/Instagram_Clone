@@ -44,11 +44,8 @@ header {
 	justify-content: center;
     width: 100%;
 	height:100vh;
-	background: #e55d87;
-	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
+
+
 }
 .title {
 	-webkit-align-self: center;
@@ -84,6 +81,33 @@ header {
 	letter-spacing: 5px;
 	margin-top: 50px;
 }
+.btn{
+	background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn2{
+	background-color: #4890d0; /* Green */
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 
 
 
@@ -94,12 +118,12 @@ header {
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="ml-4 black-sm text-gray-900 dark:text-black-800 underline ">Dashboard</a>
+                        <a class="btn2" href="{{ url('/dashboard') }}" class="ml-4 black-sm text-gray-900 dark:text-black-800 underline ">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="ml-4 black-sm text-gray-900 dark:text-black-800 underline ">Log in</a>
+                        <a class="btn2" href="{{ route('login') }}" class="ml-4 black-sm text-gray-900 dark:text-black-800  ">Log in</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 black-sm text-gray-900 dark:text-black-800 underline ">Register</a>
+                            <a class="btn" href="{{ route('register') }}" class="ml-4 black-sm text-gray-900 dark:text-black-800  ">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -110,7 +134,11 @@ header {
   <div class="title">
     <div><span class="typcn typcn-heart-outline icon heading"></span></div>
     <div class="smallsep heading"></div>
-    <h1 class="heading"> Instagram</h1>
+	
+    <h1 class="heading"><img src="{{url('logo.jpg')}}" width="200px" class="css-class" alt="alt text"></h1>
+	<img style=" display: block;
+	margin-left: auto;
+	margin-right: auto;" src="{{url('log.png')}}" />
     <div class="smallsep heading"></div>
   </div>
 </header>

@@ -10,3 +10,8 @@
 <p>npm run dev</p>
 <p>php artisan serve</p>
 <p>php artisan queue:work</p>
+
+
+<h1>Notes </h1>
+<p>Add your Mail-Trap Username and Password in .env file</p>
+<p>Add your database name in .env file</p>

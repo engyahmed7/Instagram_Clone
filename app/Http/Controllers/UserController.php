@@ -83,7 +83,6 @@ class UserController extends Controller
         ]);
         if (auth()->user()->email != $request->email) {
             auth()->user()->newEmail($request->email);
-            // send message to user to verify new email
             return redirect()->route('profile.show', Auth::user())->with('error', 'Please verify your new email address');
         }
 

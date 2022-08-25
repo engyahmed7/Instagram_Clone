@@ -5,9 +5,10 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Notifications\Notification;
 
-class RegisteredUserNotification extends Notification implements ShouldQueue
+class RegisteredUserNotification extends VerifyEmail implements ShouldQueue
 {
     use Queueable;
 
@@ -40,14 +41,7 @@ class RegisteredUserNotification extends Notification implements ShouldQueue
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable)
-    {
-        return (new MailMessage)
-            ->line('welcome :')
-            ->action('Verify Email', url('/'))
-            ->line('Thank you for using our application!');
-
-    }
+  
 
     /**
      * Get the array representation of the notification.

@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            
+
         </x-slot>
 
         <!-- Session Status -->
@@ -12,12 +12,9 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-<h1 class="text-center " style="color: #e55d87;
-	color: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	color: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	color: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
-    font-size:30px; font-weight:bold;">INSTAGRAM</h1>
+            <img style=" display: block;
+            margin-left: auto;
+            margin-right: auto;" src="log.png" />
             <!-- Email Address -->
             <div>
                 <x-label for="email" :value="__('Email')" />

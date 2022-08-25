@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 
 class EmailController extends Controller
 {
-    public function sendEmail(Request $request)
+    Public function sendEmail(Request $request)
 
 {
-        /* This method will call SendEmailJob Job*/
-        dispatch(new SendEmailJob($request));
-    }
+
+/* This method will call SendEmailJob Job*/
+
+dispatch(new SendEmailJob($request));
+
+}
 }

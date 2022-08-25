@@ -57,7 +57,7 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        $users = User::where('id', 1)->get();
+        $users = auth()->user();
         Notification::send($users, new RegisteredUserNotification($users));
         // FacadesNotification::send($users , new RegisteredUserNotification($user));
 
