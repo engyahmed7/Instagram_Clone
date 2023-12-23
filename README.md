@@ -71,6 +71,14 @@ To run the project locally, follow these steps:
 - Add your Mail-Trap Username and Password in the .env file.
 - Add your database name in the .env file.
 
+## Features
+
+- User Authentication: Allow users to sign up, log in, and manage their accounts securely.
+- Profile Management: Users can edit their profiles, upload profile pictures, and view other users' profiles.
+- Post Creation and Sharing: Users can upload photos, add captions, and share them with their followers.
+- Social Interactions: Users can follow/unfollow other users, like posts, and leave comments.
+- Feed: A personalized feed for each user displaying posts from the users they follow.
+
 ## Technologies Used
 
 - **Laravel:** PHP web application framework
